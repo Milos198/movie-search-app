@@ -20,10 +20,7 @@ body {
   width: 100%;
 }
 
-h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
+
 
 
 
@@ -127,7 +124,7 @@ h3 {
 .search-container {
   width: 100%;
   max-width: 1200px;
-  padding: 0 20px;
+  padding: 0 100px;
   margin: 0 auto;
   display: flex;
   align-items: flex-start;
@@ -188,7 +185,7 @@ h3 {
   font-size: 16px;
   border: 1px solid whitesmoke;
   border-radius: 12px;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.137);
   color: white;
   cursor: pointer;
 }
@@ -234,11 +231,21 @@ h3 {
   max-width: 600px;
 }
 
+.hero-text h1 {
+  font-size: 56px;
+  margin-bottom: 20px;
+  color: rgb(255, 255, 255);
+   font-family: "Badeen Display", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
 @media (max-width: 768px) {
   .movie-container {
     flex-direction: column;
     align-items: center;
     text-align: left;
+    gap: 20px;
   }
 
   .movie-container img {
@@ -246,6 +253,13 @@ h3 {
     height: auto;
     object-fit: contain;
   }
+
+  .hero-text h1 {
+    font-size: 32px;
+  
+  margin-bottom: 20px;
+  color: rgb(255, 255, 255);
+}
 
   h1 {
     font-size: 12px;
@@ -349,19 +363,16 @@ h3 {
   color: white;
   margin: 0 auto;
   
-  padding: 0px 30px 30px 30px;
+  padding: 30px 30px 30px 30px;
   max-width: 800px;
 }
 
 .hero-text h4 {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 400;
 }
 
-.hero-text h1 {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
+
 
 
 
