@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Details</title>
+
+  <link rel="stylesheet" href="./src/style.css" />
+
+  <style>
+    /* GLOBAL BACKGROUND OVERLAY */
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      margin: 0;
+      width: 100%;
+      max-width: 100%;
+      color: #eee;
+      background: transparent; /* poster preuzima pozadinu */
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(4px);
+      z-index: -1;
+    }
+
+    img {
+      width: 260px;
+      border-radius: 8px;
+      height: fit-content;
+    }
+
+    .info {
+      flex: 1;
+      width: 100%;
+      gap: 5px;
+    }
+
+    .info p {
+      font-size: 14px;
+      color: hsl(0, 0%, 100%);
+      padding-top: 10px;
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 32px;
+      color: rgb(255, 255, 255);
+      margin-bottom: 20px;
+    }
+
+    .back-btn {
+      padding: 12px 24px;
+      font-size: 16px;
+      border: whitesmoke solid 1px;
+      border-radius: 12px;
+      background: hsla(0, 0%, 0%, 0.437);
+      color: #ffffff;
+      cursor: pointer;
+      margin-left: 22px;
+      margin-bottom: 30px;
+    }
+
+    .back-btn:hover {
+      background: hsla(0, 0%, 0%, 0.612);
+    }
+
+    .movie-container {
+      display: flex;
+      gap: 20px;
+      background: rgba(0, 0, 0, 0.45);
+      padding: 20px;
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .similar {
+      margin-top: 40px;
+    }
+
+    .similar-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 12px;
+    }
+
+    .similar-card {
+      background: #00000050;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      backdrop-filter: blur(20px) brightness(1.2);
+      -webkit-backdrop-filter: blur(20px) brightness(1.2);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .similar-card:hover {
+      transform: scale(1.05);
+    }
+
+    .similar-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .similar h2 {
+      font-size: 24px;
+      color: rgb(255, 255, 255);
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .similar h4 {
+      font-size: 18px;
+      color: rgb(255, 255, 255);
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .similar p {
+      font-size: 14px;
+      color: hsla(0, 0%, 100%, 0.412);
+    }
+  </style>
+</head>
+
+<body>
+  <button class="back-btn" onclick="window.close()">← Back</button>
+
+  <div id="movie-details">Loading...</div>
+
+  <div class="similar">
+    <h2>Similar Movies</h2>
+    <div id="similarMovies" class="similar-grid"></div>
+  </div>
+
+  <script type="module" src="./src/movie.js"></script>
+</body>
+</html>
