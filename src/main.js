@@ -50,7 +50,8 @@ searchInput.addEventListener("input", async () => {
 
       item.addEventListener("click", () => {
         hideDropdown();
-        window.open(`/kodehode/movie.html?id=${movie.imdbID}`, "_blank");
+        window.open(`/movie-search-app/movie.html?id=${movie.imdbID}`, "_blank");
+
 
       });
 
@@ -146,7 +147,8 @@ async function searchMovies() {
       `;
 
       card.addEventListener("click", () => {
-        window.open(`/kodehode/movie.html?id=${movie.imdbID}`, "_blank");
+        window.open(`/movie-search-app/movie.html?id=${movie.imdbID}`, "_blank");
+
 
       });
 
