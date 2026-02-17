@@ -109,7 +109,8 @@ async function loadSimilarMovies(movie) {
       `;
 
     card.addEventListener("click", () => {
-  window.open(`/kodehode/movie.html?id=${sim.imdbID}`, "_blank");
+  window.open(`/movie-search-app/movie.html?id=${sim.imdbID}`, "_blank");
+
 });
 
 
