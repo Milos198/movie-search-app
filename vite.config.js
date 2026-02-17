@@ -1,7 +1,8 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: '/kodehode/',
+  base: '/movie-search-app/',
+
   build: {
     rollupOptions: {
       input: {
