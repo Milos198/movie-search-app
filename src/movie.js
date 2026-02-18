@@ -49,8 +49,10 @@ async function loadMovie() {
           <p><strong>Runtime:</strong> ${movie.Runtime}</p>
           <p><strong>IMDB Rating:</strong> ${movie.imdbRating}</p>
           <p><strong>Genre:</strong> ${movie.Genre}</p>
+          <p><strong>Rated:</strong> ${movie.Rated}</p>
           <p><strong>Actors:</strong> ${movie.Actors}</p>
           <p><strong>Plot:</strong> ${movie.Plot}</p>
+
         </div>
       </div>
     `;
